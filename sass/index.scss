@@ -1,0 +1,243 @@
+@import 'calendar.scss';
+@import 'remindme.scss';
+
+
+@font-face {
+    font-family: "Brandon";
+    src: url("../font/Brandon--light.woff2") format("woff2"),url("../font/Brandon--light.woff") format("woff");
+    font-style: normal;
+    font-weight: 300
+}
+
+@font-face {
+    font-family: "Brandon";
+    src: url("../font/Brandon--regular.woff2") format("woff2"),url("../font/Brandon--regular.woff") format("woff");
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: "Brandon";
+    src: url("../font/Brandon--medium.woff2") format("woff2"),url("../font/Brandon--medium.woff") format("woff");
+    font-style: normal;
+    font-weight: 500
+}
+
+@font-face {
+    font-family: "Brandon";
+    src: url("../font/Brandon--bold.woff2") format("woff2"),url("../font/Brandon--bold.woff") format("woff");
+    font-style: normal;
+    font-weight: 700
+}
+
+@font-face {
+    font-family: "Brandon";
+    src: url("../font/Brandon--black.woff2") format("woff2"),url("../font/Brandon--black.woff") format("woff");
+    font-style: normal;
+    font-weight: 900
+}
+
+h1,h2,h3,h4{
+	padding: 0;
+	margin: 0;
+	font-family: "Brandon";
+}
+
+h3{
+	font-weight: 400;
+	font-family: "Brandon";
+	margin: 10px 0;
+}
+
+html{
+	padding: 0;
+	margin: 0;
+	color: #1E1D26;
+	position: relative;
+	width: 100%;
+}
+
+body{
+	padding: 0 10px;
+    font-family: "Brandon";
+}
+
+*{
+	box-sizing: border-box;
+}
+
+
+
+::-webkit-scrollbar {
+    width: .2em;
+    // display: none;
+}
+ 
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,.2);
+  outline: 1px solid slategrey;
+}
+
+
+#container{
+	max-width: 1200px;
+	width: 100%;
+	height: 85vh;
+	top: 40px;
+	z-index: 1000;
+	margin: 0 auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	background: linear-gradient(#fff,rgba(256,256,256,.9));
+	box-shadow: 0 0 50px .1px rgba(0,0,0,.1);
+	border-radius: 3px;
+	border: 1px solid #d9d9d9;
+}
+
+.no-ul{
+	padding:0 ;
+	margin: 0;
+	list-style-type: none;
+}
+
+#header{
+	
+	border-bottom: 1px solid #f1f1f1;
+	display: inline-block;
+	width: 100%;
+
+	.logo{
+		float: left;
+		margin-right: 20px;
+		text-align: center;
+		margin: 10px 0 0 10px;
+	}
+
+	.nav{
+		float: left;
+		margin: 0 10px;
+
+		li{
+			display: inline-block;
+
+			a{
+				padding: 15px 10px;
+				font-family: "Brandon";
+				display: inline-block;
+				color: #47525d;
+				text-transform: uppercase;
+				font-size: .9em;
+				font-weight: 500;
+				text-decoration: none;
+				border-top: 3px solid rgba(0,0,0,0);
+				transition: .22s all linear;
+			}
+			a:hover{
+				color: #1E1D26;
+				border-top: 3px solid #75d701;
+			}
+
+		}
+
+	}
+}
+
+
+.content{
+	padding: 10px;
+}
+
+
+input:not([type="checkbox"]),input:not([type="radio"]),input:not([type="file"]),textarea, select{
+    border-radius: 2px;
+    border: 1px solid #a9a9a9;
+    display: block;
+    font-size: 1em;
+    font-family: "Brandon", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    max-width: 1200px;
+    padding: 0.5em 0.7em;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: border-color 150ms;
+    transition: border-color 150ms;
+    outline: none;
+
+    &:focus{
+    	border: 1px solid #d9d9d9;
+    }
+    
+}
+
+label{
+	margin-bottom: 5px;
+	display: block;
+}
+
+.two-fields{
+	display: flex;
+	width: 100%;
+
+	label{
+		width: calc(50% - 2px);
+		margin: 0;
+
+		&:nth-child(1){
+			margin-right: 10px;
+		}
+
+	}
+	
+}
+
+button[type="submit"]{
+	background-color: #007ee5;
+	color: #fff;
+	font-family: "Brandon";
+	font-weight: 500;
+	border: 1px solid rgba(0,0,0,.1);
+	padding: 8px 10px;
+	text-align: center;
+	max-width: 150px;
+	margin: 10px auto;
+	outline: none;
+}
+
+.popup{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+	max-width: 250px;
+	margin: 0 auto;
+	background: #7b8994;
+	color: #fff;
+	border-radius: 5px;
+	text-align: center;
+	display: none;
+	padding: 10px 15px;
+	transition: .22s all linear;
+
+	// &.active{
+	// 	top: 50px;
+	// 	// animation: fadeOut 3s;
+	// }
+
+	// @keyframes pulse {
+	//   0% {
+	//   	opacity: 1;
+	//   }
+	//   50%{
+	//   	opacity: .5
+	//   }
+	//   100% {
+	//   	opacity: 0;
+	//   }
+	// }
+
+}

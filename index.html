@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Sentinel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="`">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/font/fa/css/font-awesome.min.css">
+
+</head>
+<body style="background-image: url('helper_files/10.jpg'); background-size: cover;background-position: center center;background-attachment: fixed;">
+				<!-- <img src="assets/img/logo/logo_img_trans.png" width="300px"> -->
+
+<div id="container">
+	<header id="header">
+		<div class="header-wrap">
+			<a href="" class="logo">
+				<img src="assets/img/logo/logo_img_trans.png" width="30px">
+			</a>
+			<ul class="no-ul nav">
+				<!-- <li><a href="">My Calendar</a></li> -->
+				<!-- <li><a href="">New</a></li> -->
+			</ul>
+		</div>
+	</header>
+
+	<div class="content">
+		<div class="content-wrap">
+
+			<div id="cal-type-1">
+				<a href="#today" class="today"> Today's schedule </a>
+				<h4 class="page-title"><i class="fa fa-calendar"></i> Schedule something and sentinel will remind you</h4>
+				
+
+				<div class="cal-wrap">
+					<div class="months">
+					<div class="title">Year</div>
+						<select id="year">
+							<option>2016</option>
+							<option>2017</option>
+							<option>2018</option>
+							<option>2019</option>
+							<option>2020</option>
+						</select>
+						<div class="title">Month</div>
+						<ul class="no-ul" id="months">
+							<li data-id="0">January</li>
+							<li data-id="1">February</li>
+							<li data-id="2">March</li>
+							<li data-id="3">April</li>
+							<li data-id="4">May</li>
+							<li data-id="5">June</li>
+							<li data-id="6">July</li>
+							<li data-id="7" class="active">August</li>
+							<li data-id="8">September</li>
+							<li data-id="9">October</li>
+							<li data-id="10">November</li>
+							<li data-id="11">December</li>
+						</ul>
+					</div>
+
+					<div class="calendar">
+						<div class="title">August</div>
+						<div class="no-ul" id="days">
+							
+							<!-- <li><span class="date">1</span></li>
+							<li><span class="date">2</span></li>
+							<li><span class="date">3</span></li>
+							<li><span class="date">4</span></li>
+							<li>
+								<span class="date">5</span>
+							</li>
+							<li><span class="date">6</span></li>
+							<li><span class="date">7</span></li>
+							<li><span class="date">8</span></li>
+							<li><span class="date">9</span></li>
+							<li><span class="date">10</span></li>
+							<li><span class="date">11</span></li>
+							<li><span class="date">12</span></li>
+							<li><span class="date">1</span></li>
+							<li>
+								<div class="stuff">
+									<span class="p3"></span>
+									<span class="p1"></span>
+									<span class="p4"></span>
+								</div>
+								<span class="date">2</span></li>
+							<li><span class="date">3</span></li>
+							<li><span class="date">4</span></li>
+							<li><span class="date">5</span></li>
+							<li><span class="date">6</span></li>
+							<li><span class="date">7</span></li>
+							<li><span class="date">8</span></li>
+							<li><span class="date">9</span></li>
+							<li><span class="date">10</span></li>
+							<li>
+								<div class="stuff">
+									<span class="p1"></span>
+									<span class="p2"></span>
+									<span class="p3"></span>
+									<span class="p4"></span>
+								</div>
+								<span class="date">11</span></li>
+							<li><span class="date">12</span></li>
+							<li><span class="date">1</span></li>
+							<li><span class="date">2</span></li>
+							<li><span class="date">3</span></li>
+							<li><span class="date">4</span></li>
+							<li><span class="date">5</span></li>
+							<li><span class="date">6</span></li>
+							<li><span class="date">7</span></li>
+							<li><span class="date">8</span></li>
+							<li><span class="date">9</span></li>
+							<li><span class="date">10</span></li>
+							<li><span class="date">11</span></li>
+							<li><span class="date">12</span></li> -->
+						</div>
+					</div>
+
+					<div id="remind">
+						
+						
+					</div>
+				
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<div id="thisday">
+</div>
+
+
+
+
+
+<script type="text/template" id="timeline-template">
+	
+	
+	<div class="notify">
+		<div class="when">
+			
+			<a href="#" class="modal-close"><i class="fa fa-close"></i></a>
+		</div>
+	</div>
+
+		<ul class="timeline">
+
+
+
+
+<li>
+<div class="direction-r">
+					<div class="flag-wrapper">
+
+	<span class="flag">Grocery store</span>
+						<span class="time-wrapper"><span class="time">Mid</span></span>
+					</div>
+					<div class="desc">Go to the grocery store and buy something for the </div>
+
+	</div>
+</li>
+
+
+
+			<li>
+				<div class="direction-r">
+					<div class="flag-wrapper">
+						<span class="flag">Grocery store</span>
+						<span class="time-wrapper"><span class="time">Mid</span></span>
+					</div>
+					<div class="desc">Go to the grocery store and buy something for the </div>
+				</div>
+			</li>
+		  
+			<li>
+				<div class="direction-l">
+					<div class="flag-wrapper">
+						<span class="flag">hackathon presentation</span>
+						<span class="time-wrapper"><span class="time">HIGH</span></span>
+					</div>
+					<div class="desc">Get ready for the hackathon presentation. Prepare </div>
+				</div>
+			</li>
+
+			<li>
+				<div class="direction-r">
+					<div class="flag-wrapper">
+						<span class="flag">Presentation </span>
+						<span class="time-wrapper"><span class="time">extreme</span></span>
+					</div>
+					<div class="desc">hackathon presentation ... present our sentinel</div>
+				</div>
+			</li>
+			<li>
+				<div class="direction-l">
+					<div class="flag-wrapper">
+						<span class="flag">Check out my immigration form</span>
+						<span class="time-wrapper"><span class="time">EXTREME</span></span>
+					</div>
+					<div class="desc">updates about the immigration and remeber to take passport,visa photos</div>
+				</div>
+			</li>
+	
+		  
+		</ul>
+
+
+</script>
+
+
+
+<script type="text/template" id="todo-form-template">
+	<div class="title">
+							What should you be reminded of?
+						</div>
+						<form class="new_remainder">
+							<div class="when">
+								<!-- <span class="m">August </span> <span class="d">10</span> / <span class="t"> 12:34</span> PM  -->
+								Sentinel at you service
+							</div>
+							<label>
+								<input type="text" name="s_tag" value="" placeholder="Tag for your remainder">
+							</label>
+							<label>
+								<textarea name="s_desc" value="" placeholder="Description if needed"></textarea>
+							</label>
+							<div class="two-fields">
+								<label>
+									<input type="time" name="s_time" value="">
+								</label>
+								<label>
+									<select name="s_pri">
+										<option value="0">Set priority</option>
+										<option value="1">Low</option>
+										<option value="2">Mid</option>
+										<option value="3">High</option>
+										<option value="4">Extreme</option>
+									</select>
+								</label>
+							</div>
+							<input type="hidden" name="s_day"  id="ihd">
+							<input type="hidden" name="s_month"  id="ihm">
+							<input type="hidden" name="s_year"  id="ihy">
+								<button type="submit" name="go">
+									Remind me sentinel
+								</button>
+						</form>
+
+
+<div class="popup remainder">
+		Remainder added
+</div>
+
+
+</script>
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/underscore-min.js"></script>
+<script src="assets/js/backbone-min.js"></script>
+<script src="assets/js/site.js"></script>
+
+<script>
+$(".modal-close").on("click",function(e){
+	e.preventDefault();
+	$("#thisday").fadeOut();
+})
+
+</script>
+
+
+</body>
+</html>

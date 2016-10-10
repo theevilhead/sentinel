@@ -1,0 +1,6 @@
+{
+    "name": "jack/core",
+    "require": {
+        "plivo/plivo-php": "^1.1"
+    }
+}
