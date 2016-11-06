@@ -15,7 +15,7 @@ In the launch.py file submit your detials and you will rock.
 The Initial idea was to use cron jobs and keep on and on running scripts but at this particular situation we thought of building only for one person and no boring login/signup system again.
 
 So the scripts just checks if any about the end reminders and alerts the users.
-Eventhough pvlio provided php apis it wasnt that flexible and we used python api.
+Eventhough pvlio provided php apis we had ssl certificate erros at the time and we used python api.
 
 The strong support by backbonejs and sass made us build the design fast and healty.
 Everything is built form scratch.
